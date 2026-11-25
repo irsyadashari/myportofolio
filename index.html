@@ -43,7 +43,7 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-small" href="CV_Januari_2025.pdf" download>
+      <a class="btn btn-small" href="CV_Mei_2026.pdf" download>
         <svg class="ico"><use href="#i-doc"/></svg>Resume
       </a>
     </div>
@@ -65,12 +65,12 @@
           <h1>I build iOS apps that millions of people in Indonesia use every day.</h1>
           <p class="lede">
             I've shipped Swift apps since 2018, from a small software house in Makassar to Indonesia's largest tech company.
-            Today I work on GoFood's Affordable team at Gojek, building features that make food delivery cheaper and more reliable.
+            Today I'm on GoFood's Discovery team at Gojek, where I led iOS development for GoFood PAS and now work across affordability, search and promos.
             I care about clean architecture, fast apps and teammates who can read my code.
           </p>
           <div class="hero-actions">
             <a class="btn" href="#work">See my work</a>
-            <a class="btn btn-ghost" href="CV_Januari_2025.pdf" download>
+            <a class="btn btn-ghost" href="CV_Mei_2026.pdf" download>
               <svg class="ico"><use href="#i-doc"/></svg>Download resume
             </a>
           </div>
@@ -94,8 +94,9 @@
     <span class="k">let</span> based   = <span class="s">"Jakarta, Indonesia"</span>
 
     <span class="k">var</span> stack: [<span class="t">Skill</span>] {
-        [.<span class="p">swift</span>, .<span class="p">uiKit</span>, .<span class="p">viper</span>,
-         .<span class="p">mvvm</span>, .<span class="p">rxSwift</span>, .<span class="p">unitTesting</span>]
+        [.<span class="p">swift</span>, .<span class="p">uiKit</span>, .<span class="p">swiftUI</span>,
+         .<span class="p">viper</span>, .<span class="p">mvvm</span>, .<span class="p">rxSwift</span>,
+         .<span class="p">concurrency</span>, .<span class="p">unitTesting</span>]
     }
 
     <span class="k">func</span> <span class="f">ship</span>() <span class="k">async throws</span> -&gt; <span class="t">App</span> {
@@ -131,13 +132,15 @@
           </div>
           <div class="project-body">
             <p>
-              I'm on GoFood's Affordable team, which owns GoFood PAS: a lower-priced GoFood experience that shows middle- and lower-income customers that food delivery can be affordable.
-              I build, test and ship new features for the GoFood iOS app with product and design, and work with other teams on performance, accessibility and engagement.
+              I led iOS development for GoFood PAS, a lower-priced GoFood experience for cost-sensitive customers that shows food delivery can be affordable.
+              Our team has since grown to cover Affordable, Search &amp; Growth, so I now also work on GoFood's search and promo modules.
+              I work every day with teammates in other countries, in English.
             </p>
             <ul class="facts">
               <li><span>Architecture</span>VIPER with protocol-based delegates between screens</li>
-              <li><span>UI</span>UIKit, written programmatically in Swift</li>
-              <li><span>Delivery</span>GitHub Actions pipelines</li>
+              <li><span>UI</span>UIKit in code, migrating old XIB screens to code or SwiftUI</li>
+              <li><span>Concurrency</span>Fixing data races with GCD, async/await and actors</li>
+              <li><span>Delivery</span>CI pipelines on GitHub Actions</li>
             </ul>
           </div>
           <div class="shots" tabindex="0" aria-label="Gojek App Store screenshots, scroll sideways">
@@ -168,8 +171,9 @@
             </p>
             <ul class="facts">
               <li><span>Result</span>Average memory use cut from <b>40 MB to 20 MB</b></li>
+              <li><span>Refactor</span>Moved the app to MVVM, cutting UI lag and making it easier to maintain</li>
               <li><span>Rebuild stack</span>VIPER, modularization, UIKit in code, RxSwift</li>
-              <li><span>Team</span>Code reviews and clean-code coaching for colleagues</li>
+              <li><span>Team</span>Code reviews and clean-code mentoring for junior engineers</li>
             </ul>
           </div>
         </article>
@@ -196,6 +200,7 @@
             <ul class="facts">
               <li><span>Tracking</span>Proposed one shared tracker model, cutting tracking code by <b>20%</b></li>
               <li><span>Docs</span>Feature-by-feature module docs cut grooming time by up to <b>50%</b></li>
+              <li><span>Features</span>New Hotel &amp; Villa features with VIPER and RxSwift, following SOLID</li>
               <li><span>Stack</span>Swift, dependency injection with Swinject, unit tests</li>
             </ul>
           </div>
@@ -224,7 +229,7 @@
           </div>
           <div class="project-body">
             <p>
-              On the Phoenix squad, I added and improved features in Blue Bird's taxi booking app.
+              On the Customer Retail squad, I added and improved features in Blue Bird's taxi booking app.
               Our team designed the full UI flow and business logic for Blue Bird Kirim, which lets customers send packages across the city by Blue Bird taxi.
             </p>
             <ul class="facts">
@@ -292,7 +297,7 @@
             <div>
               <h3>Software Engineer (iOS) <span class="at">GoTo Group (Gojek)</span></h3>
               <p class="where">South Jakarta · Full-time · On-site</p>
-              <p>GoFood Affordable team. Features for GoFood PAS, a lower-priced GoFood experience, in the Gojek iOS app.</p>
+              <p>GoFood Discovery team. Led iOS development for GoFood PAS, then grew into Affordable, Search &amp; Growth, including search and promos.</p>
             </div>
           </li>
           <li>
@@ -300,7 +305,7 @@
             <div>
               <h3>Senior Software Engineer (iOS) <span class="at">AXA Mandiri Financial Services</span></h3>
               <p class="where">Jakarta · Full-time · Hybrid</p>
-              <p>Stabilized the Perfect Assistant advisor app, halved its memory use, and led the architecture of its rebuild.</p>
+              <p>Stabilized the Perfect Assistant advisor app, halved its memory use, refactored it to MVVM and led the architecture of its rebuild.</p>
             </div>
           </li>
           <li>
@@ -308,7 +313,7 @@
             <div>
               <h3>Software Engineer (iOS) <span class="at">tiket.com</span></h3>
               <p class="where">Central Jakarta · Full-time · Remote</p>
-              <p>Hotel, villa and apartment booking. Analytics tracking, unit tests and module documentation.</p>
+              <p>Hotel, villa and apartment booking. New features with VIPER and RxSwift, analytics tracking, unit tests and module documentation.</p>
             </div>
           </li>
           <li>
@@ -316,7 +321,7 @@
             <div>
               <h3>Software Engineer (iOS) <span class="at">Blue Bird Group</span></h3>
               <p class="where">South Jakarta · Full-time · Remote</p>
-              <p>MyBluebird taxi app on the Phoenix squad, including the Blue Bird Kirim package delivery feature.</p>
+              <p>MyBluebird taxi app on the Customer Retail squad, including the Blue Bird Kirim package delivery feature.</p>
             </div>
           </li>
           <li>
@@ -365,15 +370,15 @@
         <div class="skills">
           <div class="skill-group">
             <h3>Language &amp; UI</h3>
-            <ul class="chips"><li>Swift</li><li>UIKit (in code)</li><li>XIB / Interface Builder</li><li>Xcode</li></ul>
+            <ul class="chips"><li>Swift</li><li>UIKit (in code)</li><li>SwiftUI</li><li>XIB / Interface Builder</li><li>Xcode</li></ul>
           </div>
           <div class="skill-group">
             <h3>Architecture</h3>
-            <ul class="chips"><li>VIPER</li><li>MVVM</li><li>MVC</li><li>Modularization</li><li>Design patterns</li><li>Dependency injection</li><li>Swinject</li></ul>
+            <ul class="chips"><li>VIPER</li><li>MVVM</li><li>MVC</li><li>Modularization</li><li>SOLID</li><li>Clean code</li><li>Design patterns</li><li>Dependency injection</li><li>Swinject</li></ul>
           </div>
           <div class="skill-group">
-            <h3>Reactive &amp; networking</h3>
-            <ul class="chips"><li>RxSwift</li><li>Alamofire</li><li>Moya</li><li>Nuke</li></ul>
+            <h3>Concurrency, reactive &amp; networking</h3>
+            <ul class="chips"><li>async/await</li><li>Actors</li><li>GCD</li><li>RxSwift</li><li>Alamofire</li><li>Moya</li><li>Nuke</li></ul>
           </div>
           <div class="skill-group">
             <h3>Quality &amp; delivery</h3>
