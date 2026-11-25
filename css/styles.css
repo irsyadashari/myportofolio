@@ -391,7 +391,7 @@ h1 {
 .shots img.is-active { transform: none; opacity: 1; }
 .shots:not(.reel-ready) img { transform: none; opacity: 1; }
 
-.reel-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: -8px; }
+.reel-controls { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: -8px; }
 .reel-dots {
   display: flex;
   align-items: center;
@@ -426,7 +426,7 @@ h1 {
   animation: reel-progress var(--reel-ms, 3200ms) linear forwards;
 }
 @keyframes reel-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.reel-toggle {
+.reel-btn {
   display: grid;
   place-items: center;
   width: 44px;
@@ -438,8 +438,16 @@ h1 {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-.reel-toggle:hover { background: rgba(0, 0, 0, 0.1); }
-.reel-toggle svg { width: 16px; height: 16px; }
+.reel-btn:hover { background: rgba(0, 0, 0, 0.1); }
+.reel-btn svg { width: 16px; height: 16px; }
+.reel-toggle { margin-left: 4px; }
+
+/* Drag and tap */
+.shots.reel-ready { cursor: grab; }
+.shots.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.shots.reel-ready img:not(.is-active) { cursor: pointer; }
+.shots.reel-ready img:not(.is-active):hover { opacity: 0.7; }
+.shots img { -webkit-user-drag: none; user-select: none; }
 
 /* Dark tile */
 .tile-dark { background: var(--black); color: var(--on-dark); }
