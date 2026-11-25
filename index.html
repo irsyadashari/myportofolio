@@ -74,6 +74,14 @@
           </a>
         </div>
         <a class="more" href="#work">See my work<svg class="ico"><use href="#i-chev"/></svg></a>
+        <ul class="teams" aria-label="Companies I've worked at">
+          <li><a href="#app-gofood"><i style="--dot:#00aa13"></i>GoTo (Gojek)<span>2024 – now</span></a></li>
+          <li><a href="#app-axa"><i style="--dot:#00008f"></i>AXA Mandiri<span>2024</span></a></li>
+          <li><a href="#app-tiket"><i style="--dot:#0064d2"></i>tiket.com<span>2022 – 24</span></a></li>
+          <li><a href="#app-bluebird"><i style="--dot:#1a5aa8"></i>Blue Bird<span>2021 – 22</span></a></li>
+          <li><a href="#app-drbob"><i style="--dot:#86868b"></i>Carakde<span>2018 – 20</span></a></li>
+        </ul>
+        <p class="local-time"><span class="pulse" aria-hidden="true"></span>Jakarta · <span id="jkt-time">UTC+7</span></p>
       </div>
 
       <div class="wrap">
@@ -106,7 +114,7 @@
     <!-- Highlights -->
     <section class="highlights">
       <div class="wrap">
-        <dl class="stats">
+        <dl class="stats reveal">
           <div><dd>8+</dd><dt>years building iOS apps</dt></div>
           <div><dd>4</dd><dt>apps shipped to the App Store</dt></div>
           <div><dd>1.16M</dd><dt>App Store ratings on Gojek, where I work now</dt></div>
@@ -117,14 +125,14 @@
     <!-- Selected work -->
     <section id="work" class="section">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Apps I've helped build.</h2>
           <p class="section-sub">Screenshots and ratings come from each app's public App Store listing in Indonesia, checked November 2026.</p>
         </div>
 
         <div class="tiles">
           <!-- GoFood / Gojek -->
-          <article class="tile">
+          <article id="app-gofood" class="tile reveal">
             <div class="tile-head">
               <img class="app-icon" src="assets/apps/gojek-icon.png" alt="" width="72" height="72">
               <p class="tile-eyebrow">GoTo Group · Aug 2024 – present</p>
@@ -156,7 +164,7 @@
           </article>
 
           <!-- AXA Mandiri -->
-          <article class="tile tile-dark">
+          <article id="app-axa" class="tile tile-dark reveal">
             <div class="tile-head">
               <span class="app-icon app-icon-text" aria-hidden="true">PA</span>
               <p class="tile-eyebrow">AXA Mandiri Financial Services · Jun – Aug 2024</p>
@@ -180,7 +188,7 @@
           </article>
 
           <!-- tiket.com -->
-          <article class="tile">
+          <article id="app-tiket" class="tile reveal">
             <div class="tile-head">
               <img class="app-icon" src="assets/apps/tiket-icon.png" alt="" width="72" height="72">
               <p class="tile-eyebrow">tiket.com · Mar 2022 – Mar 2024</p>
@@ -212,7 +220,7 @@
           </article>
 
           <!-- MyBluebird -->
-          <article class="tile">
+          <article id="app-bluebird" class="tile reveal">
             <div class="tile-head">
               <img class="app-icon" src="assets/apps/bluebird-icon.png" alt="" width="72" height="72">
               <p class="tile-eyebrow">Blue Bird Group · Mar 2021 – Mar 2022</p>
@@ -243,7 +251,7 @@
           </article>
 
           <!-- Praktek dr. Bob -->
-          <article class="tile">
+          <article id="app-drbob" class="tile reveal">
             <div class="tile-head">
               <img class="app-icon" src="assets/apps/drbob-icon.png" alt="" width="72" height="72">
               <p class="tile-eyebrow">PT Carakde Solusi Informatika · 2018 – 2020</p>
@@ -280,10 +288,10 @@
     <!-- Experience -->
     <section id="experience" class="section section-gray">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Where I've worked.</h2>
         </div>
-        <ol class="timeline">
+        <ol class="timeline reveal">
           <li>
             <p class="when">Aug 2024 – present</p>
             <div>
@@ -355,27 +363,27 @@
     <!-- Skills -->
     <section id="skills" class="section">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>What I work with.</h2>
         </div>
         <div class="skills">
-          <div class="skill-tile">
+          <div class="skill-tile reveal">
             <h3>Language &amp; UI</h3>
             <ul class="chips"><li>Swift</li><li>SwiftUI</li><li>UIKit (in code)</li><li>XIB / Interface Builder</li><li>Xcode</li></ul>
           </div>
-          <div class="skill-tile">
+          <div class="skill-tile reveal">
             <h3>Architecture</h3>
             <ul class="chips"><li>VIPER</li><li>MVVM</li><li>MVC</li><li>Modularization</li><li>SOLID</li><li>Clean code</li><li>Design patterns</li><li>Dependency injection</li><li>Swinject</li></ul>
           </div>
-          <div class="skill-tile">
+          <div class="skill-tile reveal">
             <h3>Concurrency, reactive &amp; networking</h3>
             <ul class="chips"><li>async/await</li><li>Actors</li><li>GCD</li><li>RxSwift</li><li>Alamofire</li><li>Moya</li><li>Nuke</li></ul>
           </div>
-          <div class="skill-tile">
+          <div class="skill-tile reveal">
             <h3>Quality &amp; delivery</h3>
             <ul class="chips"><li>Unit testing</li><li>TDD</li><li>Code review</li><li>Analytics tracking</li><li>GitHub Actions</li><li>Working with AI coding agents</li></ul>
           </div>
-          <div class="skill-tile skill-tile-wide">
+          <div class="skill-tile skill-tile-wide reveal">
             <h3>Also built with</h3>
             <ul class="chips"><li>Kotlin</li><li>Android Jetpack</li><li>Unity</li><li>Unreal Engine</li><li>IoT</li></ul>
           </div>
@@ -386,17 +394,17 @@
     <!-- Education -->
     <section id="education" class="section section-gray">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>Where I learned.</h2>
         </div>
         <div class="edu">
-          <div class="edu-main">
+          <div class="edu-main reveal">
             <p class="tile-eyebrow">2016 – 2020</p>
             <h3>B.Sc. Computer Science</h3>
             <p class="at">Universitas Hasanuddin (Unhas), Makassar</p>
             <p>GPA 3.59 / 4.00. Lab assistant for Internet of Things and Parallel Computing.</p>
           </div>
-          <ul class="certs">
+          <ul class="certs reveal">
             <li><b>iOS Developer Expert</b><span>Dicoding Indonesia · 2021</span></li>
             <li><b>iOS Fundamental Intermediate Class</b><span>Dicoding Academy · 2020</span></li>
             <li><b>Mastering RxSwift</b><span>Udemy · 2020 – 2021</span></li>
@@ -410,21 +418,21 @@
     <!-- Recommendations -->
     <section class="section">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h2>What people say.</h2>
         </div>
         <div class="quotes">
-          <figure class="quote quote-wide">
+          <figure class="quote quote-wide reveal">
             <blockquote>
               “Irsyad is an extraordinary learner in the programming industry. I did not know much about programming, yet he made me and all other teammates understand the general context of the technicalities, whether it was on the software or the hardware.”
             </blockquote>
             <figcaption><span><b>Nurwanti Aprilia Ningrum</b>Teammate, XL Future Leaders · via LinkedIn</span></figcaption>
           </figure>
-          <figure class="quote">
+          <figure class="quote reveal">
             <blockquote>“Irsyad is a hardworking coworker that I would trust if I ever had a digital product to build.”</blockquote>
             <figcaption><img src="img/um.png" alt="" width="40" height="40"><span><b>Achmad Fahrurrozi</b>Full-stack Web Developer</span></figcaption>
           </figure>
-          <figure class="quote">
+          <figure class="quote reveal">
             <blockquote>“Irsyad is a nice engineer to work with. He can make things simpler than they used to be.”</blockquote>
             <figcaption><img src="img/abduh.png" alt="" width="40" height="40"><span><b>Muhammad Abduh MF</b>Front-End Web Developer</span></figcaption>
           </figure>
@@ -447,7 +455,7 @@
         </div>
         <ul class="contact-list">
           <li><a href="https://wa.me/6287880931606" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg><span>+62 878 8093 1606</span></a></li>
-          <li><a href="mailto:muhirsyadashari@gmail.com"><svg class="ico"><use href="#i-mail"/></svg><span>muhirsyadashari@gmail.com</span></a></li>
+          <li class="has-copy"><a href="mailto:muhirsyadashari@gmail.com"><svg class="ico"><use href="#i-mail"/></svg><span>muhirsyadashari@gmail.com</span></a><button class="copy-btn" type="button" data-copy="muhirsyadashari@gmail.com" aria-label="Copy email address">Copy</button></li>
           <li><a href="https://www.linkedin.com/in/irsyadashari/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg><span>linkedin.com/in/irsyadashari</span></a></li>
           <li><a href="https://github.com/irsyadashari" target="_blank" rel="noopener"><svg class="ico"><use href="#i-github"/></svg><span>github.com/irsyadashari</span></a></li>
         </ul>
@@ -458,8 +466,11 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <p>© <span id="year">2026</span> Muhammad Irsyad Ashari. App names, icons and screenshots belong to their owners and are shown to illustrate my work.</p>
+      <p class="updated">Last updated <time datetime="2026-11">November 2026</time></p>
     </div>
   </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- Floating WhatsApp button, always visible -->
   <a class="fab" href="https://wa.me/6287880931606?text=Hi%20Irsyad%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener" aria-label="Chat with Irsyad on WhatsApp">
@@ -482,6 +493,56 @@
       links.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
       window.addEventListener('resize', function () { if (window.innerWidth > 833) setOpen(false); });
+
+      // Live local time in Jakarta
+      var clock = document.getElementById('jkt-time');
+      function tickClock() {
+        try {
+          var t = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Jakarta' }).format(new Date());
+          clock.textContent = t + ' local time (UTC+7)';
+        } catch (e) { clock.textContent = 'UTC+7'; }
+      }
+      tickClock();
+      setInterval(tickClock, 30000);
+
+      // Copy email with a small confirmation
+      var toast = document.getElementById('toast');
+      var toastTimer;
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (btn) {
+        btn.addEventListener('click', function () {
+          var text = btn.getAttribute('data-copy');
+          var done = function () { btn.textContent = 'Copied'; showToast('Email address copied'); setTimeout(function () { btn.textContent = 'Copy'; }, 2200); };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () { window.prompt('Copy this email address:', text); });
+          } else {
+            window.prompt('Copy this email address:', text);
+          }
+        });
+      });
+
+      // Ease sections in as they scroll into view (skipped for reduced motion)
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduce && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-reveal');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function (el) { io.observe(el); });
+        // Safety net: never leave content hidden if the observer is throttled.
+        setTimeout(function () {
+          Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function (el) {
+            if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+          });
+        }, 1500);
+      }
 
       // Hide the floating WhatsApp button while the Contact section, which has its own, is on screen.
       var fab = document.querySelector('.fab');
