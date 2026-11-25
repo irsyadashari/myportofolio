@@ -356,28 +356,90 @@ h1 {
   padding-top: 2px;
 }
 
+/* Screenshot reel: a centered carousel that plays on its own (js/reel.js).
+   Side padding of half the track minus half a screenshot lets every image, first and last included,
+   sit in the center. The tile's padding is cancelled so the reel runs edge to edge. */
+.tile { --tile-pad: clamp(22px, 5vw, 64px); }
 .shots {
+  --shot-h: 440px;
+  --shot-w: calc(var(--shot-h) * 460 / 818);
+  position: relative;
   display: flex;
-  gap: 18px;
+  gap: 22px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 4px 4px 14px;
-  margin-inline: -4px;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  margin-inline: calc(-1 * var(--tile-pad));
+  /* % padding resolves against the tile's content box, so add back the bled-out tile padding */
+  padding: 12px calc(50% + var(--tile-pad) - var(--shot-w) / 2) 18px;
+  outline-offset: -4px;
 }
-.shots > :first-child { margin-left: auto; }
-.shots > :last-child { margin-right: auto; }
+.shots::-webkit-scrollbar { display: none; }
 .shots img {
-  height: 420px;
-  width: auto;
-  aspect-ratio: 460 / 818;
+  height: var(--shot-h);
+  width: var(--shot-w);
   flex: none;
-  border-radius: 24px;
+  border-radius: 26px;
   background: #e8e8ed;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 24px -12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 18px 36px -18px rgba(0, 0, 0, 0.45);
   scroll-snap-align: center;
+  transform: scale(0.88);
+  opacity: 0.45;
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.6s ease;
 }
+.shots img.is-active { transform: none; opacity: 1; }
+.shots:not(.reel-ready) img { transform: none; opacity: 1; }
+
+.reel-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: -8px; }
+.reel-dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 980px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.reel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 980px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: width 0.35s ease, background-color 0.35s ease;
+  position: relative;
+}
+.reel-dots button::after { content: ""; position: absolute; inset: -10px -5px; }
+.reel-dots button[aria-current="true"] { width: 36px; background: rgba(0, 0, 0, 0.18); overflow: hidden; }
+.reel-dots button[aria-current="true"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.shots.is-playing + .reel-controls .reel-dots button[aria-current="true"]::before {
+  animation: reel-progress var(--reel-ms, 3200ms) linear forwards;
+}
+@keyframes reel-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.reel-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.reel-toggle:hover { background: rgba(0, 0, 0, 0.1); }
+.reel-toggle svg { width: 16px; height: 16px; }
 
 /* Dark tile */
 .tile-dark { background: var(--black); color: var(--on-dark); }
@@ -574,7 +636,8 @@ html.menu-open .fab { visibility: hidden; }
   body { font-size: 17px; }
   .skills, .quotes, .contact-list { grid-template-columns: minmax(0, 1fr); }
   .skill-tile-wide, .quote-wide { grid-column: auto; }
-  .shots img { height: 340px; border-radius: 20px; }
+  .shots { --shot-h: 380px; gap: 14px; }
+  .shots img { border-radius: 22px; }
   .tile { border-radius: 22px; }
   .timeline { border-radius: 22px; }
   .editor { border-radius: 14px 14px 0 0; }
@@ -585,7 +648,7 @@ html.menu-open .fab { visibility: hidden; }
   .avatar { width: 88px; height: 88px; }
   .hero-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 340px; }
   .stats { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .shots img { height: 300px; }
+  .shots { --shot-h: 400px; }
   .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .fab { padding: 12px 18px 12px 14px; font-size: 14px; }
   .brand { font-size: 14px; }
