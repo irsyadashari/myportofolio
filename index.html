@@ -1,196 +1,468 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Irsyad's Site</title>
-
-  <!-- favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-
-   <!-- bootstrap cdn -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-  <!-- my custom css -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Irsyad Ashari · iOS Engineer</title>
+  <meta name="description" content="Irsyad Ashari is a Software Engineer (iOS) at GoTo (Gojek) in Jakarta with 8+ years building Swift apps for GoFood, tiket.com, MyBluebird and more.">
+  <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Irsyad Ashari · iOS Engineer">
+  <meta property="og:description" content="Software Engineer (iOS) at GoTo (Gojek). 8+ years building Swift apps used by millions of people across Indonesia.">
+  <meta property="og:url" content="https://irsyadashari.github.io/myportofolio/">
+  <meta property="og:image" content="https://irsyadashari.github.io/myportofolio/img/showcase/me.jpeg">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
-
 <body>
 
-  <section id="title">
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2.02c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.1 1.3a11 11 0 0 0 5.3 5.3l1.3-2.1 4.2 1.6V17a2 2 0 0 1-2 2A15.5 15.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M4.5 19.5h15"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+  </svg>
 
-   <div class="container-fluid">
-      <!-- Nav Bar -->
-    <div class="navbar navbar-expand-lg navbar-dark">
-      <a href="" class="navbar-brand">Welcome</a>
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Irsyad Ashari, back to top">
+        <span class="brand-mark">IA</span>
+        <span class="brand-name">Irsyad Ashari</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-small" href="CV_Januari_2025.pdf" download>
+        <svg class="ico"><use href="#i-doc"/></svg>Resume
+      </a>
     </div>
+  </header>
 
-    <!-- Title -->
-    <div>
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>I'm an iOS Engineer with 6+ years of working experience.</h1>
+  <main id="top">
 
-          <div class="container">
-            <a href="https://raw.githubusercontent.com/irsyadashari/myportofolio/main/CV_Januari_2025.pdf" download="CV_Januari_2025.pdf">          
-              <button type="button" class="download-button btn btn-lg btn-light" ><i class="far fa-file"></i></i>  Get my resume</button>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-id">
+            <img class="avatar" src="img/showcase/me.jpeg" alt="Portrait of Irsyad Ashari" width="56" height="56">
+            <div>
+              <p class="hero-name">Irsyad Ashari</p>
+              <p class="hero-role"><span class="dot" aria-hidden="true"></span>Software Engineer (iOS) at GoTo · South Jakarta</p>
+            </div>
+          </div>
+          <h1>I build iOS apps that millions of people in Indonesia use every day.</h1>
+          <p class="lede">
+            I've shipped Swift apps since 2018, from a small software house in Makassar to Indonesia's largest tech company.
+            Today I work on GoFood's Affordable team at Gojek, building features that make food delivery cheaper and more reliable.
+            I care about clean architecture, fast apps and teammates who can read my code.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">See my work</a>
+            <a class="btn btn-ghost" href="CV_Januari_2025.pdf" download>
+              <svg class="ico"><use href="#i-doc"/></svg>Download resume
             </a>
           </div>
-
+          <dl class="stats">
+            <div><dt>Years building iOS apps</dt><dd>8+</dd></div>
+            <div><dt>Apps shipped to the App Store</dt><dd>4</dd></div>
+            <div><dt>Ratings on Gojek, my current app</dt><dd>1.16M</dd></div>
+          </dl>
         </div>
-        <div class="text-center col-lg-4">
-          <div>
-            <img class="title-image" src="img/iphone.png" alt="iphone-mockup">
+
+        <figure class="editor" aria-label="A Swift struct that summarises Irsyad's profile">
+          <div class="editor-bar">
+            <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="editor-file">Irsyad.swift</span>
+          </div>
+<pre class="code"><code><span class="c">// Muhammad Irsyad Ashari</span>
+<span class="k">struct</span> <span class="t">Irsyad</span>: <span class="t">iOSEngineer</span> {
+    <span class="k">let</span> role    = <span class="s">"Software Engineer (iOS)"</span>
+    <span class="k">let</span> company = <span class="s">"GoTo · GoFood"</span>
+    <span class="k">let</span> since   = <span class="n">2018</span>
+    <span class="k">let</span> based   = <span class="s">"Jakarta, Indonesia"</span>
+
+    <span class="k">var</span> stack: [<span class="t">Skill</span>] {
+        [.<span class="p">swift</span>, .<span class="p">uiKit</span>, .<span class="p">viper</span>,
+         .<span class="p">mvvm</span>, .<span class="p">rxSwift</span>, .<span class="p">unitTesting</span>]
+    }
+
+    <span class="k">func</span> <span class="f">ship</span>() <span class="k">async throws</span> -&gt; <span class="t">App</span> {
+        <span class="k">try await</span> <span class="f">build</span>(clean: <span class="k">true</span>, tested: <span class="k">true</span>)
+    }
+}</code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Selected work -->
+    <section id="work" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Apps I've helped build</h2>
+          <p class="section-sub">Screenshots and ratings come from each app's public App Store listing (Indonesia store), checked November 2026.</p>
+        </div>
+
+        <!-- GoFood / Gojek -->
+        <article class="project">
+          <div class="project-top">
+            <div class="project-id">
+              <img class="app-icon" src="assets/apps/gojek-icon.png" alt="" width="64" height="64">
+              <div>
+                <h3>GoFood in the Gojek app</h3>
+                <p class="meta">GoTo Group · Software Engineer (iOS) · Aug 2024 – present</p>
+              </div>
+            </div>
+            <a class="rating" href="https://apps.apple.com/id/app/gojek/id944875099" target="_blank" rel="noopener">
+              <svg class="ico star"><use href="#i-star"/></svg><b>4.7</b><span>1.16M ratings</span><svg class="ico"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <p>
+              I'm on GoFood's Affordable team, which owns GoFood PAS: a lower-priced GoFood experience that shows middle- and lower-income customers that food delivery can be affordable.
+              I build, test and ship new features for the GoFood iOS app with product and design, and work with other teams on performance, accessibility and engagement.
+            </p>
+            <ul class="facts">
+              <li><span>Architecture</span>VIPER with protocol-based delegates between screens</li>
+              <li><span>UI</span>UIKit, written programmatically in Swift</li>
+              <li><span>Delivery</span>GitHub Actions pipelines</li>
+            </ul>
+          </div>
+          <div class="shots" tabindex="0" aria-label="Gojek App Store screenshots, scroll sideways">
+            <img src="assets/apps/gojek-1.jpg" alt="Gojek App Store screenshot 1" width="460" height="818" loading="lazy">
+            <img src="assets/apps/gojek-2.jpg" alt="Gojek App Store screenshot 2" width="460" height="818" loading="lazy">
+            <img src="assets/apps/gojek-3.jpg" alt="Gojek App Store screenshot 3" width="460" height="818" loading="lazy">
+            <img src="assets/apps/gojek-4.jpg" alt="Gojek App Store screenshot 4" width="460" height="818" loading="lazy">
+          </div>
+        </article>
+
+        <!-- AXA Mandiri -->
+        <article class="project project-compact">
+          <div class="project-top">
+            <div class="project-id">
+              <span class="app-icon app-icon-text" aria-hidden="true">PA</span>
+              <div>
+                <h3>Perfect Assistant</h3>
+                <p class="meta">AXA Mandiri Financial Services · Senior Software Engineer (iOS) · Jun – Aug 2024</p>
+              </div>
+            </div>
+            <span class="tag">Internal app · no public screenshots</span>
+          </div>
+          <div class="project-body">
+            <p>
+              An internal app that more than 2,300 AXA Mandiri financial advisors use to find and follow up with potential clients.
+              I took it over from an outside vendor and fixed memory leaks, class-heavy overhead and UI lag from work on the main thread.
+              I was then asked to be the architect for a full rebuild of the app.
+            </p>
+            <ul class="facts">
+              <li><span>Result</span>Average memory use cut from <b>40 MB to 20 MB</b></li>
+              <li><span>Rebuild stack</span>VIPER, modularization, UIKit in code, RxSwift</li>
+              <li><span>Team</span>Code reviews and clean-code coaching for colleagues</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- tiket.com -->
+        <article class="project">
+          <div class="project-top">
+            <div class="project-id">
+              <img class="app-icon" src="assets/apps/tiket-icon.png" alt="" width="64" height="64">
+              <div>
+                <h3>tiket.com Hotels &amp; Villas</h3>
+                <p class="meta">tiket.com · Software Engineer (iOS) · Mar 2022 – Mar 2024</p>
+              </div>
+            </div>
+            <a class="rating" href="https://apps.apple.com/id/app/tiket-com-flight-hotel-deals/id890405921" target="_blank" rel="noopener">
+              <svg class="ico star"><use href="#i-star"/></svg><b>4.8</b><span>138K ratings</span><svg class="ico"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <p>
+              I worked on the Accommodation vertical (hotels, villas and apartments) of one of Indonesia's biggest travel apps, with 17 million+ users.
+              I built and maintained features, wrote analytics tracking and unit tests, and documented the whole module.
+            </p>
+            <ul class="facts">
+              <li><span>Tracking</span>Proposed one shared tracker model, cutting tracking code by <b>20%</b></li>
+              <li><span>Docs</span>Feature-by-feature module docs cut grooming time by up to <b>50%</b></li>
+              <li><span>Stack</span>Swift, dependency injection with Swinject, unit tests</li>
+            </ul>
+          </div>
+          <div class="shots" tabindex="0" aria-label="tiket.com App Store screenshots, scroll sideways">
+            <img src="assets/apps/tiket-1.jpg" alt="tiket.com App Store screenshot 1" width="460" height="818" loading="lazy">
+            <img src="assets/apps/tiket-2.jpg" alt="tiket.com App Store screenshot 2" width="460" height="818" loading="lazy">
+            <img src="assets/apps/tiket-3.jpg" alt="tiket.com App Store screenshot 3" width="460" height="818" loading="lazy">
+            <img src="assets/apps/tiket-4.jpg" alt="tiket.com App Store screenshot 4" width="460" height="818" loading="lazy">
+            <img src="assets/apps/tiket-5.jpg" alt="tiket.com App Store screenshot 5" width="460" height="818" loading="lazy">
+          </div>
+        </article>
+
+        <!-- MyBluebird -->
+        <article class="project">
+          <div class="project-top">
+            <div class="project-id">
+              <img class="app-icon" src="assets/apps/bluebird-icon.png" alt="" width="64" height="64">
+              <div>
+                <h3>MyBluebird</h3>
+                <p class="meta">Blue Bird Group · Software Engineer (iOS) · Mar 2021 – Mar 2022</p>
+              </div>
+            </div>
+            <a class="rating" href="https://apps.apple.com/id/app/mybluebird-taxi-car-rental/id476533261" target="_blank" rel="noopener">
+              <svg class="ico star"><use href="#i-star"/></svg><b>4.8</b><span>44K ratings</span><svg class="ico"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <p>
+              On the Phoenix squad, I added and improved features in Blue Bird's taxi booking app.
+              Our team designed the full UI flow and business logic for Blue Bird Kirim, which lets customers send packages across the city by Blue Bird taxi.
+            </p>
+            <ul class="facts">
+              <li><span>Stack</span>Swift 5, UIKit in code and XIBs, MVVM, RxSwift</li>
+              <li><span>Libraries</span>Alamofire, Moya</li>
+              <li><span>Quality</span>Code reviews and test-driven unit testing</li>
+            </ul>
+          </div>
+          <div class="shots" tabindex="0" aria-label="MyBluebird App Store screenshots, scroll sideways">
+            <img src="assets/apps/bluebird-1.jpg" alt="MyBluebird App Store screenshot 1" width="460" height="818" loading="lazy">
+            <img src="assets/apps/bluebird-2.jpg" alt="MyBluebird App Store screenshot 2" width="460" height="818" loading="lazy">
+            <img src="assets/apps/bluebird-3.jpg" alt="MyBluebird App Store screenshot 3" width="460" height="818" loading="lazy">
+            <img src="assets/apps/bluebird-4.jpg" alt="MyBluebird App Store screenshot 4" width="460" height="818" loading="lazy">
+            <img src="assets/apps/bluebird-5.jpg" alt="MyBluebird App Store screenshot 5" width="460" height="818" loading="lazy">
+          </div>
+        </article>
+
+        <!-- Praktek dr. Bob -->
+        <article class="project">
+          <div class="project-top">
+            <div class="project-id">
+              <img class="app-icon" src="assets/apps/drbob-icon.png" alt="" width="64" height="64">
+              <div>
+                <h3>Praktek dr. Bob</h3>
+                <p class="meta">PT Carakde Solusi Informatika · Mobile Developer · 2018 – 2020</p>
+              </div>
+            </div>
+            <a class="rating" href="https://apps.apple.com/id/app/praktek-dr-bob/id1534862547" target="_blank" rel="noopener">
+              <svg class="ico star"><use href="#i-star"/></svg><b>4.5</b><span>App Store</span><svg class="ico"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="project-body">
+            <p>
+              A queue and appointment app for a pediatric practice, which I built for both iOS and Android.
+              Parents can check the live queue, book visits and keep track of their children's vaccinations.
+              I published it to the App Store and Google Play.
+            </p>
+            <ul class="facts">
+              <li><span>iOS</span>Swift 5, UIKit, Alamofire, Nuke, Charts</li>
+              <li><span>Android</span>Kotlin, Android Jetpack navigation and testing</li>
+              <li><span>Scope</span>Built and released alone, on both platforms</li>
+            </ul>
+          </div>
+          <div class="shots" tabindex="0" aria-label="Praktek dr. Bob App Store screenshots, scroll sideways">
+            <img src="assets/apps/drbob-1.jpg" alt="Praktek dr. Bob login screen" width="460" height="818" loading="lazy">
+            <img src="assets/apps/drbob-2.jpg" alt="Praktek dr. Bob App Store screenshot 2" width="460" height="818" loading="lazy">
+            <img src="assets/apps/drbob-3.jpg" alt="Praktek dr. Bob App Store screenshot 3" width="460" height="818" loading="lazy">
+            <img src="assets/apps/drbob-4.jpg" alt="Praktek dr. Bob App Store screenshot 4" width="460" height="818" loading="lazy">
+            <img src="assets/apps/drbob-5.jpg" alt="Praktek dr. Bob App Store screenshot 5" width="460" height="818" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've worked</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <p class="when">Aug 2024 – present</p>
+            <div>
+              <h3>Software Engineer (iOS) <span class="at">GoTo Group (Gojek)</span></h3>
+              <p class="where">South Jakarta · Full-time · On-site</p>
+              <p>GoFood Affordable team. Features for GoFood PAS, a lower-priced GoFood experience, in the Gojek iOS app.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Jun 2024 – Aug 2024</p>
+            <div>
+              <h3>Senior Software Engineer (iOS) <span class="at">AXA Mandiri Financial Services</span></h3>
+              <p class="where">Jakarta · Full-time · Hybrid</p>
+              <p>Stabilized the Perfect Assistant advisor app, halved its memory use, and led the architecture of its rebuild.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Mar 2022 – Mar 2024</p>
+            <div>
+              <h3>Software Engineer (iOS) <span class="at">tiket.com</span></h3>
+              <p class="where">Central Jakarta · Full-time · Remote</p>
+              <p>Hotel, villa and apartment booking. Analytics tracking, unit tests and module documentation.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Mar 2021 – Mar 2022</p>
+            <div>
+              <h3>Software Engineer (iOS) <span class="at">Blue Bird Group</span></h3>
+              <p class="where">South Jakarta · Full-time · Remote</p>
+              <p>MyBluebird taxi app on the Phoenix squad, including the Blue Bird Kirim package delivery feature.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Jan 2021 – Jul 2021</p>
+            <div>
+              <h3>Front-End Web Mentor <span class="at">Makassar Coding</span></h3>
+              <p class="where">Makassar · Part-time</p>
+              <p>Taught the basics of front-end web development.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Sep 2018 – Dec 2020</p>
+            <div>
+              <h3>Mobile Application Developer, then iOS App Developer <span class="at">PT Carakde Solusi Informatika</span></h3>
+              <p class="where">Makassar · Full-time</p>
+              <p>Built and tested client apps for iPhone, iPad, Android and macOS, including Praktek dr. Bob and ReViRe, a VR property tour in Unity and Unreal Engine made for an Indonesian Ministry of Industry competition.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Nov 2018 – Feb 2021</p>
+            <div>
+              <h3>XL Future Leaders Awardee, Batch 7 <span class="at">PT XL Axiata Tbk</span></h3>
+              <p class="where">Jakarta · Part-time</p>
+              <p>Two-year leadership program. Co-founded WaletQu, an IoT startup to make swiftlet nest farming more productive.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Oct 2019 – Jul 2020</p>
+            <div>
+              <h3>Core Team <span class="at">Google Developer Student Clubs</span></h3>
+              <p class="where">Makassar</p>
+              <p>Ran local programming community events.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>What I work with</h2>
+        </div>
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Language &amp; UI</h3>
+            <ul class="chips"><li>Swift</li><li>UIKit (in code)</li><li>XIB / Interface Builder</li><li>Xcode</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Architecture</h3>
+            <ul class="chips"><li>VIPER</li><li>MVVM</li><li>MVC</li><li>Modularization</li><li>Design patterns</li><li>Dependency injection</li><li>Swinject</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Reactive &amp; networking</h3>
+            <ul class="chips"><li>RxSwift</li><li>Alamofire</li><li>Moya</li><li>Nuke</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Quality &amp; delivery</h3>
+            <ul class="chips"><li>Unit testing</li><li>TDD</li><li>Code review</li><li>Analytics tracking</li><li>GitHub Actions</li><li>Working with AI coding agents</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Also built with</h3>
+            <ul class="chips"><li>Kotlin</li><li>Android Jetpack</li><li>Unity</li><li>Unreal Engine</li><li>IoT</li></ul>
           </div>
         </div>
       </div>
-    </div>
-   </div>
-  </section>
+    </section>
 
-  <!-- Features -->
-  <section id="features">
-    <div class="row">
-      <div class="features-box col-lg-4">
-        <i class="icon fas fa-check-circle fa-4x"></i>
-        <h3>Get the task done.</h3>
-        <p>I'll put everything to get the task done.</p>
-      </div>
-      <div class="features-box col-lg-4">
-        <i class="icon fas fa-bullseye fa-4x"></i>
-        <h3>Working on target</h3>
-        <p>Keeping the workflow adjusting the timeline pursuing client happiness</p>
-      </div>
-      <div class="features-box col-lg-4">
-        <i class="icon fas fa-heart fa-4x"></i>
-        <h3>Working with heart.</h3>
-        <p>I have dedicated 4+ years of my life learning to code to pursue my passion in tech.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
-
-    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <h2><em>"Irsyad is a hardworker coworker that I will trust if I ever had a digital product to build"</em></h2>
-          <img class="testimonial-image" src="img/um.png" alt="dog-profile">
-          <br>
-          <em>Achmad Fahrurrozi</em>
-          <br>
-          <em>Fullstack Web Developer</em>
+    <!-- Education -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Education &amp; certifications</p>
+          <h2>Where I learned</h2>
         </div>
-
-        <div class="carousel-item">
-          <h2><em>"Irsyad is a nice engineer to be work with. He can simplify things than it used to be"</em></h2>
-          <img class="testimonial-image" src="img/abduh.png" alt="dog-profile">
-          <br>
-          <em>Muhammad Abduh MF</em>
-          <br>
-          <em>Front-End Web Developer</em>
+        <div class="edu">
+          <div class="edu-main">
+            <p class="when">2016 – 2020</p>
+            <h3>B.Sc. Computer Science</h3>
+            <p class="at">Universitas Hasanuddin (Unhas), Makassar</p>
+            <p>GPA 3.59 / 4.00. Lab assistant for Internet of Things and Parallel Computing.</p>
+          </div>
+          <ul class="certs">
+            <li><b>iOS Developer Expert</b><span>Dicoding Indonesia · 2021</span></li>
+            <li><b>iOS Fundamental Intermediate Class</b><span>Dicoding Academy · 2020</span></li>
+            <li><b>Mastering RxSwift</b><span>Udemy · 2020 – 2021</span></li>
+            <li><b>Android Jetpack Masterclass in Kotlin</b><span>Udemy · 2019</span></li>
+            <li><b>Master Unity by Building 6 Games</b><span>Udemy · 2018</span></li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Press -->
-  <!-- <section id="press">
-    
-
-  </section> -->
-
-
-  <!-- project-showcase -->
-
-  <section id="project-showcase">
-    <h2>Project Showcase</h2>
-    <p>Here is some of projects I've previously handled</p>
-    <br>
-    <br>
-    <div class="container">
-      <h2 class="about-title">Dr Bob Pediatrician App </h1>
-    </div>
-    
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-3 mb-5 bg-white rounded" src="./img/showcase/login page.png" width="250" height="500" alt="Brnad-1">
+    <!-- Recommendations -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Recommendations</p>
+          <h2>What people say</h2>
         </div>
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-2 mb-5 bg-white" src="./img/showcase/home screen.png" alt="Brnad-1">
-        </div>
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-3 mb-5 bg-white rounded" src="./img/showcase/Notification list.png" width="250" height="500" alt="Brnad-1">
-        </div>
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-3 mb-5 bg-white rounded" src="./img/showcase/profile anak.png" width="250" height="500" alt="Brnad-1">
-        </div>
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-3 mb-5 bg-white rounded" src="./img/showcase/scheduling page.png" width="250" height="500" alt="Brnad-1">
-        </div>
-        <div class="col-lg-4">
-          <img class="showcase-image shadow-sm p-3 mb-5 bg-white rounded" src="./img/showcase/vaccine list.png" width="250" height="500" alt="Brnad-1">
+        <div class="quotes">
+          <figure class="quote quote-wide">
+            <blockquote>
+              “Irsyad is an extraordinary learner in the programming industry. I did not know much about programming, yet he made me and all other teammates understand the general context of the technicalities, whether it was on the software or the hardware.”
+            </blockquote>
+            <figcaption><span><b>Nurwanti Aprilia Ningrum</b>Teammate, XL Future Leaders · via LinkedIn</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Irsyad is a hardworking coworker that I would trust if I ever had a digital product to build.”</blockquote>
+            <figcaption><img src="img/um.png" alt="" width="40" height="40"><span><b>Achmad Fahrurrozi</b>Full-stack Web Developer</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Irsyad is a nice engineer to work with. He can make things simpler than they used to be.”</blockquote>
+            <figcaption><img src="img/abduh.png" alt="" width="40" height="40"><span><b>Muhammad Abduh MF</b>Front-End Web Developer</span></figcaption>
+          </figure>
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- Call to Action -->
-
-  <section id="cta">
-
-    <div class="container-fluid">
-      <h3 id="cta-sentence">Find yourself a professional engineer by hiring me!</h3>
-
-     <div class="container">
-        <a href="#footer">
-          <button type="button" class="download-button btn btn-lg btn-light" ><i class="fab fa-whatsapp"></i></i>  +62 878 8093 1606</button>
-        </a>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Building an iOS app? Let's talk.</h2>
+          <p class="lede">I'm happy to hear about iOS roles, freelance projects and collaborations.</p>
+        </div>
+        <ul class="contact-list">
+          <li><a href="mailto:muhirsyadashari@gmail.com"><svg class="ico"><use href="#i-mail"/></svg><span>muhirsyadashari@gmail.com</span></a></li>
+          <li><a href="https://wa.me/6287880931606" target="_blank" rel="noopener"><svg class="ico"><use href="#i-phone"/></svg><span>+62 878 8093 1606 (WhatsApp)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/irsyadashari/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg><span>linkedin.com/in/irsyadashari</span></a></li>
+          <li><a href="https://github.com/irsyadashari" target="_blank" rel="noopener"><svg class="ico"><use href="#i-github"/></svg><span>github.com/irsyadashari</span></a></li>
+        </ul>
       </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Muhammad Irsyad Ashari</p>
+      <p>App names, icons and screenshots belong to their owners and are shown to illustrate my work.</p>
     </div>
-  </section>
-
-
-  <!-- Footer -->
-
-  <footer id="footer">
-    <a href="https://www.linkedin.com/in/irsyad-ashari-11a51812a/" target="_blank"><i class="small-icon fab fa-linkedin"></i></a>
-    <a href="https://github.com/irsyadashari" target="_blank"><i class="small-icon fab fa-github"></i></a>
-    <p>© Copyright 2025 Irsyad Ashari</p>
   </footer>
 
-  <!-- SCRIPT FOR JAVASCRIPT -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-
 </html>
